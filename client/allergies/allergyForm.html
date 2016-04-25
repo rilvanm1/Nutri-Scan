@@ -1,0 +1,34 @@
+<template name="allergyForm">
+  {{>main}}
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>Allergies</h1>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-2">
+      <form id="allergyForm" class="form-horizontal">
+
+        <div class="form-group">
+          <label for="allergyName" class="control-label col-xs-2">Allergy</label>
+          <div class="col-xs-10">
+            <input id="allergyName" class="form-control" type="text" placeholder="peanuts, eggs">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-2">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <center><ol>
+        {{#each allergy}}
+          <li> {{allergyName}}</li>
+        {{/each}}
+  </ol></center>
+</template>

@@ -1,0 +1,164 @@
+/* CSS Document */
+body, html{
+	margin:0;
+	padding:0;
+	color: #fff;
+	background: #8f4e45;
+}
+
+/* Header */
+#headercontent {
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	height: 0px;
+	margin: 0px;
+	padding:0px;
+}
+
+#headercontent h1 {
+	text-align: center;
+	padding-top: 20px;
+}
+
+/*Banner*/
+#bannerContent ul li{
+	text-align: center;
+	padding: 10px;
+}
+
+#banner {
+	padding-top: 30px;
+}
+
+/*Form*/
+.buttonLogIn {
+    color: black;
+    background-color:#5ACC5A;
+    border: none;
+    padding: 5px 0px 5px 0px;
+}
+
+.buttonpad {
+	padding-left: 105px;
+}
+
+.sign {
+	width: 300px;
+	height:200px;
+	margin:0;
+	padding:0;
+	background: #000;
+}
+
+.colpad {
+	padding-left: 70px;
+}
+
+.userFont {
+	color: #000;
+	background-color : #ebecee;
+}
+
+
+.logRegForm {
+  align: center;
+  width: 320px;
+  height: 320px;
+  margin:0 auto;
+  padding-top:0px;
+  text-align: center;
+  background: url("img/log.png") no-repeat center;
+}
+
+.formPad {
+  align: center;
+  padding-top: 85px;
+  text-align: center;
+}
+
+input {
+  width: 200px;
+  margin-bottom:10px
+ 
+}
+
+input.error{
+  background-color:#40AF83;
+}
+
+.logRegForm a {
+  text-decoration: none;
+  color: #51E051;
+}
+
+
+/*Home Navigation*/
+.navigation {
+  text-align: center;
+}
+
+.navigation li {
+	display: inline-block;
+	float: center;
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+
+.navigation a {
+  padding: 25px 60px 40px 0px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+}
+
+/*Food Item Content*/
+.foodItemSmallContent {
+  align: center;
+  margin:0;
+  padding-top:0px;
+  text-align: center;
+}
+
+.foodItemContent {
+  width: 100%;
+  padding: 50px;
+  margin: 0;
+  background-size: 100%;
+  background-image: url("img/foodItemBackground.jpg");
+  background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.foodItemContent img {
+  max-width: 100%;
+  height:200px; 
+  align:middle; 
+  opacity: 4
+}
+
+/*food search*/
+.list-group {
+  color: #000;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px 40px 10px 40px;
+}
+
+
+
+
+
+
+

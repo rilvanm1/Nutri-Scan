@@ -1,0 +1,64 @@
+<template name="productForm">
+  {{>main}}
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>Add a Product</h1>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <form id="productForm" class="form-horizontal">
+
+        <div class="form-group">
+          <label for="productName" class="control-label col-xs-2">Product Name</label>
+          <div class="col-xs-10">
+            <input id="productName" class="form-control" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="barCode" class="control-label col-xs-2">Bar Code</label>
+          <div class="col-xs-10">
+            <input id="barCode" class="form-control" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Calories" class="control-label col-xs-2">Calories</label>
+          <div class="col-xs-10">
+            <input id="calories" class="form-control" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Fat" class="control-label col-xs-2">Fat</label>
+          <div class="col-xs-10">
+            <input id="fat" class="form-control" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Protein" class="control-label col-xs-2">Protein</label>
+          <div class="col-xs-10">
+            <input id="protein" class="form-control" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="carbohydrate" class="control-label col-xs-2">Carbohydrate</label>
+          <div class="col-xs-10">
+            <input id="carbohydrate" class="form-control" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-2">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

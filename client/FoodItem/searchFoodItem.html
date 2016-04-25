@@ -1,0 +1,19 @@
+<template name="search">
+<body>
+    {{>main}}
+    <div class="page-header clearfix">
+      <h4 class="pull-left"></h4>
+      <div class="pull-right">
+        <input type="text" id="search" name="search" class="form-control" width="250px" placeholder="Find a product...">
+      </div>
+    </div>
+
+    <ul class="list-group">
+        {{#each foodItem}}
+          <li class="list-group-item clearfix">
+            <center><a href="/food/{{_id}}">{{productName}}</a></center>
+          </li>
+        {{/each}}
+    </ul>
+</body>
+</template>

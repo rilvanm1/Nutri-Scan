@@ -1,0 +1,19 @@
+<template name="foodDetails">
+  <body>
+    {{>main}}
+    <h1>{{productName}}</h1><br>
+    <center>
+    <table>
+     <tr>
+        <td><center>Calories <br>{{calories}}</center></td>
+        <td><center>Fat <br>{{fat}}g</center></td>
+     </tr>
+     <tr>
+        <td><center>Protein <br>{{protein}}g</center></td>
+        <td><center>Carbs <br>{{carbohydrate}}</center></td>
+     </tr>
+    </table>
+    </center>
+    {{displayProtein protein}}
+  </body>
+</template>

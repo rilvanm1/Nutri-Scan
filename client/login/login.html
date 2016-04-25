@@ -1,0 +1,59 @@
+
+<template name="main">
+  <div id="bannerContent">
+      <div id="banner">
+        <center><img class="hidden-xs" id= "bannerimg" src="img/logo1.png" alt="main image" style="max-width: 100%;height:200px; align:middle; opacity: 4"></center>
+      </div><!--End banner -->
+  </div>
+</template>
+
+<template name="navigation">
+  <div class="mainNav">
+    <div class="navigation" >
+      <ul>
+          <li><a href="{{pathFor route='home'}}">Home</a></li>
+          {{#if currentUser}}
+            <li><a href="#" class="logout">Logout</a></li>
+            <li><a href="{{pathFor route='porfolio'}}">Portfolio</a></li>
+            <li><a>My Profile</a></li>
+          {{else}}
+            <li><a href="{{pathFor route='register'}}">Register</a></li>
+            <li><a href="{{pathFor route='login'}}">Login</a></li>
+          {{/if}}
+      </ul>
+    </div>
+  </div>
+</template>
+
+<template name="register">
+   {{>main}}
+   <div class="logRegForm">
+    <div class="formPad">
+          <h2>Register</h2>
+        <form class="register">
+
+            <input type="text" name="firstName" class="userFont" placeholder="First Name"><br>
+            <input type="text" name="lastName" class="userFont"  placeholder="Last Name"><br>
+            <input type="email" name="email" class="userFont" placeholder="Email"><br>
+            <input type="password" name="password" class="userFont" placeholder="Password"><br>
+            <input type="submit" value="Register" class="button"><br>
+        </form>
+      </div>
+    </div>
+</template>
+
+<template name="login">
+      {{>main}}
+      <div class="logRegForm">
+         <div class="formPad"> 
+                <center><h2>Log In</h2></center>
+          <form class="login">
+                  <input  type="text" name="email" class="userFont" placeholder="Email" required>
+                  <input type="password" name="password" class="userFont" placeholder="Password" required>
+                  <input type="submit" value="login" class="buttonLogIn" >
+          </form>
+              <a href="{{pathFor route='register'}}">Sign up</a><br>
+              <a> Forgot password </a>
+        </div>
+    </div>
+</template>
