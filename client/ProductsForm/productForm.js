@@ -15,6 +15,7 @@ Template.productForm.events({
     const fat = template.find('#fat').value;
     const protein = template.find('#protein').value;
     const carbohydrate = template.find('#carbohydrate').value;
+    const ingredients = template.find('#ingredients').value;
 
 
 
@@ -24,7 +25,8 @@ Template.productForm.events({
       calories: calories,
       fat: fat,
       protein: protein,
-      carbohydrate:carbohydrate
+      carbohydrate:carbohydrate,
+      ingredients:ingredients
     }
 
     Meteor.call('product.insert', newProduct);

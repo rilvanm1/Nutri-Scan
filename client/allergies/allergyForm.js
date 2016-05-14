@@ -27,7 +27,20 @@ Meteor.subscribe('allergies');
 Template.allergyForm.helpers({
   allergy : function(){
     return Allergies.find().fetch();
+  },
+
+  alertAllergy : function() {
+    const allergies = Allergies.find().fetch();
+    allergies.forEach(function (post) {
+    console.log("Title of post " + ": " + post.allergyName);
+  });
   }
+    /*
+    while ( allergies.hasNext() ) {
+        aller = allergies.next();
+        console.log( aller.allergyName );
+    }
+  }*/
 });
 
 

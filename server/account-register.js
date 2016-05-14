@@ -12,15 +12,20 @@ import { Meteor } from 'meteor/meteor';
 Meteor.methods({
 	'allergy.insert': function(allergy) {
 	 Allergies.insert(allergy);
+},
+'product.insert': function(foodItem) {
+    Product.insert(foodItem);
 }
+
+
 
 
 });
 
-Meteor.methods({
+/*Meteor.methods({
 	'prodcut.insert': function(foodItem) {
 	 Product.insert(foodItem);
 }
 
 
-});
+});*/
