@@ -1,10 +1,24 @@
 {
-  "name": "login",
+  "name": "nutriscan",
   "private": true,
   "scripts": {
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
-  }
+    "meteor-node-stubs": "~0.2.0",
+    "nutritionix": "^0.6.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rilvanm1/Personal-Project-II.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rilvanm1/Personal-Project-II/issues"
+  },
+  "homepage": "https://github.com/rilvanm1/Personal-Project-II#readme",
+  "description": ""
 }

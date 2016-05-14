@@ -22,17 +22,23 @@ Template.allergyForm.events({
 });
 
 Meteor.subscribe('allergies');
-
+Meteor.subscribe('productIngredients');
 
 Template.allergyForm.helpers({
   allergy : function(){
+    var allergy = Allergies.findOne({allergyName:"peanuts"}, {fields: {allergyName: 1} });
+    //console.log(allergy.allergyName);
     return Allergies.find().fetch();
   },
 
   alertAllergy : function() {
     const allergies = Allergies.find().fetch();
+    var productIngredients = Product.findOne({productName:'Kit Kat Bites'}, {fields: {productName: 1}});
+    //return Product.find({productName:"Pretzels"}).fetch();
     allergies.forEach(function (post) {
-    console.log("Title of post " + ": " + post.allergyName);
+      console.log(productIngredients.productName);
+      console.log("Title of post " + ": "+ post.allergyName );
+    //return productIngredients;
   });
   }
     /*
