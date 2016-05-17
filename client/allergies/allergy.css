@@ -1,0 +1,8 @@
+ul#nav-items li {
+	list-style: none;
+	display: inline;
+	margin: 10px 25px 0px 0px;
+	text-align: center;
+	cursor: pointer;
+
+}

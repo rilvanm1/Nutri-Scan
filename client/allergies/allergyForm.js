@@ -33,13 +33,25 @@ Template.allergyForm.helpers({
 
   alertAllergy : function() {
     const allergies = Allergies.find().fetch();
-    var productIngredients = Product.findOne({productName:'Kit Kat Bites'}, {fields: {productName: 1}});
+    var productIngredients = Product.findOne({productName:'Areial Chocolate Cake'}, {fields: {ingredients: 1}});
     //return Product.find({productName:"Pretzels"}).fetch();
+    let arr = new Array();
     allergies.forEach(function (post) {
-      console.log(productIngredients.productName);
-      console.log("Title of post " + ": "+ post.allergyName );
-    //return productIngredients;
+      let ingredients= productIngredients.ingredients;
+      console.log(ingredients);
+      
+      //console.log("psot: "+post.allergyName);
+      if (ingredients.indexOf(post.allergyName) >= 0) {
+        arr.push(post.allergyName);
+        console.log("found");
+      }
+      console.log("array:"+arr);
+      
+      //console.log("Title of post " + ": "+ post.allergyName );
+      //return productIngredients;
+
   });
+    return arr;
   }
     /*
     while ( allergies.hasNext() ) {
