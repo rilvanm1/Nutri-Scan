@@ -23,7 +23,7 @@
      </tr>
     </table>
     </center>
-    {{displayProtein protein}}
+ 
     <center><p>Ingredients: {{ingredients}} </p></center>
     <ul id="all-list">
     <center>
@@ -35,6 +35,7 @@
     {{/if}}
     </center>
      </ul>
+     {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
     </div>
 </div>
 </template>

@@ -51,7 +51,7 @@ Template.foodDetails.helpers({
       console.log(ingredients);
       
       //console.log("psot: "+post.allergyName);
-      if (ingredients.indexOf(post.allergyName) >= 0) {
+      if (ingredients.toLowerCase().indexOf(post.allergyName) >= 0) {
         arr.push(post.allergyName);
         console.log("found");
       }
@@ -102,6 +102,48 @@ Template.foodDetails.helpers({
   }
   
 });
+Template.foodDetails.topGenresChart = function() {
+    fat=parseInt(this.fat);
+    protein=parseInt(this.protein);
+    carbohydrate=parseInt(this.carbohydrate);
+
+    return {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: ""
+        },
+        tooltip: {
+            pointFormat: '<b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    },
+                    connectorColor: 'silver'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'genre',
+            data: [
+                ['Fat',   fat],
+                ['Protein', protein],
+                ['carbohydrate',   carbohydrate]
+            ]
+        }]
+    };
+};
 
 
 
