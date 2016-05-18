@@ -1,0 +1,67 @@
+/*profileCOntent*/
+.profileContent {
+    background-color:#fff;
+   	max-width: 100%;
+   	padding: 50px;
+}
+
+#mainProfile h1 {
+	color:#5ACC5A;
+}
+
+/*list*/
+ul#all-list li {
+	list-style: none;
+	display: inline;
+	margin: 10px 25px 0px 0px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+
+}
+
+/*Buttons*/
+.btn-allergy {
+    background-color: #5ACC5A;
+    border-color: #00619C;
+    min-width: 30px;
+    width: 80px;
+    display: inline-block; 
+    height: 30px;
+    font-size: 14px;
+    color:#fff;
+}
+
+/*Manage Button*/
+.btn-manage {
+    background-color: #8f4e45;
+    border-color: #8f4e45;
+    min-width: 30px;
+    width: 100px;
+    display: inline-block; 
+    height: 35px;
+    font-size: 11px;
+    color:#fff;
+}
+
+button{
+  display: inline-block;
+  vertical-align: top;
+  padding: .4em .8em;
+  margin: 0;
+  background: #0090BE;
+  border: 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:focus{
+  outline: 0 none;
+}
+
+.form-group h6 {
+	font-weight: bold;
+}

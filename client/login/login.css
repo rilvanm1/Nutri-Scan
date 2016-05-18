@@ -1,7 +1,8 @@
 /* CSS Document */
 body, html{
-	margin:0;
-	padding:0;
+	height: 100%;
+  margin: 0;
+  padding: 0
 	color: #fff;
 	background: #8f4e45;
 }
@@ -24,11 +25,11 @@ body, html{
 /*Banner*/
 #bannerContent ul li{
 	text-align: center;
-	padding: 10px;
+	padding: 0px;
 }
 
 #banner {
-	padding-top: 30px;
+	padding-top: 0px;
 }
 
 /*Form*/

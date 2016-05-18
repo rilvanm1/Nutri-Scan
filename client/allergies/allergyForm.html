@@ -1,38 +1,43 @@
 <template name="allergyForm">
   {{>main}}
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <h1>Allergies</h1>
-      <hr />
+  <div id="main-body">
+    <div class="profileContent">
+      <div class ="container">
+        <div class="row">
+            <form class="form-inline" id="mainProfile">
+               <h1>Dietry Restrictions</h1><br>
+              <div class="form-group ">
+                <div class="col-lg-offset-5">
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Peanuts, fish, eggs">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-lg-offset-10 col-xs-6">
+                  <input type="submit" value="Submit" id="add">
+                </div>
+              </div>
+            </form>
+        </div>  
+      </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-2">
-      <form id="allergyForm" class="form-horizontal">
-
-        <div class="form-group">
-          <label for="allergyName" class="control-label col-xs-2">Allergy</label>
-          <div class="col-xs-10">
-            <input id="allergyName" class="form-control" type="text" placeholder="peanuts, eggs">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-8 col-xs-offset-2">
-            <input type="submit" value="Submit">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <ul>
+  <ul id="all-list">
+    
     {{#each allergy}}
     <li> {{allergyName}}</li>
     {{/each}}
+  
+    {{#if foundAllergy}}
+    <p>Found</p>
+    {{else}}
+    <p>Not found</p>
+    {{/if}}
+
+    <li>Contains: </li>
 
     {{#each alertAllergy}}
-    <li>{{this}}</li>
+    <li><button class="btn-allergy" id="allergyName">{{this}}</button></li>
     {{/each}}
   </ul>
 </template>

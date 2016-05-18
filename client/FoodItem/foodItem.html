@@ -1,29 +1,27 @@
 <template name="foodItem">
-<body>
   {{>main}}
+  <div id="main-body">
     <div class="foodItemContent">
       <div class ="container">
-      <div class="row">
-          <form id="productForm" class="form-horizontal">
-            <div class="form-group">
-              <!--<label for="productName" class="control-label col-xs-2"></label>-->
-              <center><h1>Choose a button below</h1></center><br>
-              <div class="foodItemSmallContent">
-                <div class="col-xs-5 col-xs-offset-1">
-                  <center><img id= "scanimg" src="img/scanner.jpg" alt="foodItem image" style=" opacity: 0.8 border:0;"></center>
-                  <center>Scan</center>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1">
-                  <center><img class= "keyboardimg" src="img/keyboard.jpg" alt="foodItem image" style=" opacity: 0.8 border:0;"></center>
-                  <center>Keyboard</center>
+        <div class="row">
+            <form id="productForm" class="form-horizontal">
+              <div class="form-group">
+                <!--<label for="productName" class="control-label col-xs-2"></label>-->
+                <center><h1>Choose a button below</h1></center><br>
+                <div class="foodItemSmallContent">
+                  <div class="col-xs-5 col-xs-offset-1">
+                    <center><img id= "scanimg" src="img/scanner.jpg" alt="foodItem image" style=" opacity: 0.8 border:0;"></center>
+                    <center>Scan</center>
+                  </div>
+                  <div class="col-xs-5 col-xs-offset-1">
+                    <center><img class= "keyboardimg" src="img/keyboard.jpg" alt="foodItem image" style=" opacity: 0.8 border:0;"></center>
+                    <center>Keyboard</center>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+        </div>
       </div>
     </div>
-    </div>
-    <center><h2> History </h2></center>
-    <br>
-  </body>
+  </div>
 </template>
