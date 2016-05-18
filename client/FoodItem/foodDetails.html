@@ -1,8 +1,16 @@
 <template name="foodDetails">
-  <div id="main-body">
-    <div class="profileContent">
+  
     {{>main}}
-    <h1>{{productName}}</h1><br>
+    <div id="main-body">
+    <div class="profileContent">
+    {{#if foundAllergy productName}}
+    <h1 style="display:inline">{{productName}}</h1>
+    <center><h3 style="display:inline" class="unSuitable">Not Suitable</h3></center><br>
+    {{else}}
+    <h1 style="display:inline">{{productName}}</h1>
+    <center><h3 style="display:inline" class="suitable">Suitable</h3></center><br>
+    {{/if}}
+    
     <center>
     <table>
      <tr>
@@ -11,12 +19,22 @@
      </tr>
      <tr>
         <td><center>Protein <br>{{protein}}g</center></td>
-        <td><center>Carbs <br>{{carbohydrate}}</center></td>
+        <td><center>Carbs <br>{{carbohydrate}}g</center></td>
      </tr>
     </table>
     </center>
     {{displayProtein protein}}
-    <p>Ingredients: </p>{{ingredients}}
+    <center><p>Ingredients: {{ingredients}} </p></center>
+    <ul id="all-list">
+    <center>
+    {{#if foundAllergy productName}}
+        <li class="conAll">Conatins:</li>
+        {{#each alertAllergy productName}}
+        <li><button class="btn-allergy" id="allergyName">{{this}}</button></li>
+        {{/each}}
+    {{/if}}
+    </center>
+     </ul>
     </div>
 </div>
 </template>

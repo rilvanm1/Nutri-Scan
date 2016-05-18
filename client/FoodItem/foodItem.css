@@ -2,5 +2,22 @@ div#main-body {
 	width: 100%;
 	height: auto;
 	/*padding-right: 100px;*/
+}
 
+.suitable {
+	color: #5ACC5A;
+	font-weight: bold;
+}
+
+.unSuitable {
+	color: #8f4e45;
+
+}
+
+h3 {
+	font-weight: bold;
+}
+
+.conAll {
+	font-size: 19px;
 }
