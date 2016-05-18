@@ -24,12 +24,19 @@ ul#all-list li {
 .btn-allergy {
     background-color: #5ACC5A;
     border-color: #00619C;
-    min-width: 30px;
-    width: 80px;
+    min-width: 80px;
+    max-width: 180px;
     display: inline-block; 
     height: 30px;
     font-size: 14px;
     color:#fff;
+    position: relative;
+    
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
 }
 
 /*Manage Button*/
@@ -47,7 +54,7 @@ ul#all-list li {
 button{
   display: inline-block;
   vertical-align: top;
-  padding: .4em .8em;
+  /*padding: .4em .8em;*/
   margin: 0;
   background: #0090BE;
   border: 0;
@@ -56,6 +63,7 @@ button{
   font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
+  position: relative;
 }
 
 button:focus{

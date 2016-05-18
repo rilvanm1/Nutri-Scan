@@ -15,7 +15,10 @@ Meteor.methods({
 },
 'product.insert': function(foodItem) {
     Product.insert(foodItem);
-}
+},
+  'allergy.remove':function(allergy){
+    Allergies.remove({_id:allergy});
+  }
 
 
 

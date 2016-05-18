@@ -17,6 +17,12 @@ Template.allergyForm.events({
 
     Meteor.call('allergy.insert', newAllergy);
     alert(`Added: ${newAllergy.allergyName})`);
+  },
+
+  'click #allergyRemove': function(){
+    let allergy = this._id;
+    Meteor.call('allergy.remove', allergy);
+    //Meteor.call('allergy.insert', newAllergy);
   }
 });
 
