@@ -1,6 +1,7 @@
 Meteor.subscribe('allergies');
 Meteor.subscribe('productIngredients');
 
+
 Template.foodItem.events({
     'click .keyboardimg': function(event){
         event.preventDefault();
@@ -80,7 +81,7 @@ Template.foodDetails.helpers({
       console.log(ingredients);
       
       //console.log("psot: "+post.allergyName);
-      if (ingredients.indexOf(post.allergyName) >= 0) {
+      if (ingredients.toLowerCase().indexOf(post.allergyName) >= 0) {
         arr.push(post.allergyName);
         count++;
         console.log("foundeddd");
