@@ -4,5 +4,5 @@ Meteor.publish('allergies', function(){
 });
 
 Meteor.publish('productIngredients', function() {
-	return Product.find();
+	return Product.find().fetch();
 });

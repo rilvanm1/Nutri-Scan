@@ -1,12 +1,11 @@
 Meteor.subscribe('allergies');
 Meteor.subscribe('productIngredients');
 
-
-Template.foodItem.events({
-    'click .keyboardimg': function(event){
-        event.preventDefault();
-        Router.go('search');
-    }
+/*Search*/
+Template.search.helpers({
+  foodItem : function(){
+    return Product.find().fetch();
+  }
 });
 
 Template.search.onCreated(function onCreated(){
@@ -16,10 +15,19 @@ Template.search.onCreated(function onCreated(){
   });
 });
 
-Template.search.helpers({
-  foodItem : function(){
-    return Product.find().fetch();
+Template.search.events({
+  'keypress #search': function(event){
+    console.log($('#search').val());
+    query.set($('#search').val());
   }
+});
+
+/*Food Item*/
+Template.foodItem.events({
+    'click #keyboardimg': function(event){
+        event.preventDefault();
+        Router.go('search');
+    }
 });
 
 Template.foodDetails.helpers({
@@ -28,13 +36,7 @@ Template.foodDetails.helpers({
   }
 });
 
-Template.search.events({
-  'keypress #search': function(event){
-    console.log($('#search').val());
-    query.set($('#search').val());
-  }
-});
-
+/*Food details*/
 Template.foodDetails.helpers({
   allergy : function(){
     var allergy = Allergies.findOne({allergyName:"peanuts"}, {fields: {allergyName: 1} });
