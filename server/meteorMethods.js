@@ -13,16 +13,12 @@ Meteor.methods({
 	'allergy.insert': function(allergy) {
 	 Allergies.insert(allergy);
 },
-'product.insert': function(foodItem) {
+  'product.insert': function(foodItem) {
     Product.insert(foodItem);
 },
   'allergy.remove':function(allergy){
     Allergies.remove({_id:allergy});
-  }
-
-
-
-
+}
 });
 
 /*Meteor.methods({
